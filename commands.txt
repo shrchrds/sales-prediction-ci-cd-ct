@@ -1,0 +1,18 @@
+python -m venv venv
+
+powershell -ExecutionPolicy Bypass -File .\venv\Scripts\Activate.ps1
+
+
+.\venv\Scripts\Activate.ps1
+
+
+python train_model.py
+
+python continuous_training.py
+
+
+docker build -t sales-app:latest .
+
+docker run -p 8000:8000 sales-app:latest
+
+uvicorn app:app --reload --host 0.0.0.0 --port 8000

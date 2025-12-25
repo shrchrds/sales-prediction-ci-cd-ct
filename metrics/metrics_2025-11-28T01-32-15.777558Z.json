@@ -1,0 +1,9 @@
+{
+  "r2": 0.9559885232631409,
+  "mse": 0.725621343036541,
+  "data_path": "data/add.csv",
+  "model_path": "model.pkl",
+  "test_size": 0.4,
+  "random_state": 42,
+  "trained_at": "2025-11-28T01:32:15.777558Z"
+}

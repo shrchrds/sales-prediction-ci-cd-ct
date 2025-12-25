@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sales Prediction</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; }
+        .container { max-width: 400px; margin: auto; }
+        h2 { text-align: center; }
+        form { display: flex; flex-direction: column; }
+        input { margin: 5px 0; padding: 10px; border-radius: 5px; border: 1px solid #ccc; }
+        button { padding: 10px; background: #007BFF; color: white; border: none; border-radius: 5px; }
+        .result { margin-top: 20px; text-align: center; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2> Sales Prediction</h2>
+        <form action="/predict_form" method="post">
+            <label>TV Advertisement ($)</label>
+            <input type="number" step="0.01" name="TV" required>
+            
+            <label>Radio Advertisement ($)</label>
+            <input type="number" step="0.01" name="Radio" required>
+            
+            <label>Newspaper Advertisement ($)</label>
+            <input type="number" step="0.01" name="Newspaper" required>
+            
+            <button type="submit">Predict</button>
+        </form>
+        
+        {% if prediction %}
+        <div class="result">
+            💡 Predicted Sales: <span style="color:green">{{ prediction }}</span>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
