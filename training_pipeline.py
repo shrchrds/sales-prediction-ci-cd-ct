@@ -13,7 +13,7 @@ from sklearn.metrics import r2_score, mean_squared_error
 # Default configs (can be overridden with environment variables)
 DEFAULT_DATA_PATH = os.getenv("DATA_PATH", "data/add.csv")
 DEFAULT_MODEL_PATH = os.getenv("MODEL_PATH", "model.pkl")
-DEFAULT_TEST_SIZE = float(os.getenv("TEST_SIZE", "0.4"))
+DEFAULT_TEST_SIZE = float(os.getenv("TEST_SIZE", "0.3"))
 DEFAULT_RANDOM_STATE = int(os.getenv("RANDOM_STATE", "42"))
 
 
